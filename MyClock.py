@@ -1,5 +1,6 @@
 from ImageDrawer import CImageDrawer
 from DivoomController import CDivoomController
+import time
 
 class CMyClock:
     def __init__(self, divoom_ip):
@@ -127,7 +128,9 @@ class CMyClock:
 
 
     def Draw(self, filename):
+
         self.DrawBackGround()
+        time.sleep(0.5)
         self.DrawTime()
         self.DrawText(self.GetText(filename))
 
